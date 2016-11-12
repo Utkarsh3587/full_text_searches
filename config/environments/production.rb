@@ -70,7 +70,10 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
-
+  # config.cluster_url = 'http://localhost:9200'
+  config.cluster_url = 'https://elastic:3YXntDA1SBd015DYS3H7XmdJ@64782647a58059d2b1a73070325878fc.us-east-1.aws.found.io:9243/'
+  config.cluster_index = 'person'
+  config.cluster_type = 'profile'
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 

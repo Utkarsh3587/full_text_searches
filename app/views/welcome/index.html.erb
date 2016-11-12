@@ -1,4 +1,53 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<% content_for :title do %>
+    <title>Search Sites | TheSearch</title>
+<% end %>
+
+
+<div class="row" id="search-area">
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7">
+    <%= form_tag(search_string_path, :method => 'get', :id => 'search-form') do %>
+        <div class="input-group">
+          <%= text_field_tag :search_string, params[:search_string], id: 'query', class: 'form-control input-lg', placeholder: 'Search for...' %>
+          <span class="input-group-btn"><button class="btn btn-primary btn-lg" id="search_query" type="submit">
+            <span class="glyphicon glyphicon-search"></span></button></span>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<div class="row" id="search-results" style="overflow-x: hidden">
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7">
+
+    <% if @response.present? && @response.results.total > 0 %>
+
+        <ul class="list-group">
+          <h4 class="list-group-item-heading">
+            Results are:
+          </h4>
+          <% @response.results.each do |site| %>
+              <li class="list-group-item">
+                <span> First Name : <%= site.first_name %></span>
+                <span> Last Name : <%= site.last_name %></span>
+                <span> Email : <%= site.email %></span>
+                <span> Number : <%= site.contact_number %></span>
+                <span> Address : <%= site.address %></span>
+                <span> Profile : <%= site.profile_url %></span>
+                <br>
+              </li>
+          <% end %>
+        </ul>
+
+    <% else %>
+        <div class="text-muted">No results found</div>
+    <% end %>
+
+  </div>
+
+</div>
+
+
+
