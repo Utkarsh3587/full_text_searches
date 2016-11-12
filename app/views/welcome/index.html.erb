@@ -1,12 +1,12 @@
 <% content_for :title do %>
-    <title>Search Sites | TheSearch</title>
+    <title>Full Text Search</title>
 <% end %>
 
 
 <div class="row" id="search-area">
 
   <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7">
-    <%= form_tag(search_string_path, :method => 'get', :id => 'search-form') do %>
+    <%= form_tag('/', :method => 'get', :id => 'search-form') do %>
         <div class="input-group">
           <%= text_field_tag :search_string, params[:search_string], id: 'query', class: 'form-control input-lg', placeholder: 'Search for...' %>
           <span class="input-group-btn"><button class="btn btn-primary btn-lg" id="search_query" type="submit">
