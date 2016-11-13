@@ -1,0 +1,38 @@
+{
+  "mappings": {
+    "person": {
+      "_all": {
+        "enable": false
+      },
+      "properties": {
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "bday": {
+          "type": "dateTimeOptional"
+        },
+        "profile_url": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "fav_color": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "dateTimeOptional"
+        }
+      }
+    }
+  }
+}
