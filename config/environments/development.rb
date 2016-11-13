@@ -35,8 +35,7 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
-  # config.cluster_url = 'http://localhost:9200'
-  config.cluster_url = 'https://elastic:3YXntDA1SBd015DYS3H7XmdJ@64782647a58059d2b1a73070325878fc.us-east-1.aws.found.io:9243/'
+  config.cluster_url = 'http://localhost:9200'
   config.cluster_index = 'person'
   config.cluster_type = 'profile'
   # Raises error for missing translations
