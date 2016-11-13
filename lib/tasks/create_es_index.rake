@@ -1,6 +1,5 @@
 
 # task to create elastic search db mapping
-require "#{Rails.root}/app/jobs/mapping"
 
 namespace :indexing do
 
