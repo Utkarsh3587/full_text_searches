@@ -75,7 +75,7 @@ class WelcomeController < ApplicationController
   def index
     if params[:search_string]
       search_string = params[:search_string].strip
-      @response =  Site.search(perform_search(search_string), :size => 100)
+      @response =  FullTextSearch.search(perform_search(search_string), :size => 100)
     end
   end
 

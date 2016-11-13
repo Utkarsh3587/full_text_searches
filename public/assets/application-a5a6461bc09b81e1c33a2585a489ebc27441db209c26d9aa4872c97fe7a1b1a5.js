@@ -11065,7 +11065,7 @@ return jQuery;
     // Button onClick disable selector with possible reenable after remote submission
     buttonDisableSelector: 'button[data-remote][data-disable-with], button[data-remote][data-disable]',
 
-    // Up-to-date Cross-Site Request Forgery token
+    // Up-to-date Cross-FullTextSearch Request Forgery token
     csrfToken: function() {
      return $('meta[name=csrf-token]').attr('content');
     },

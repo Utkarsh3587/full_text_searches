@@ -1,6 +1,6 @@
 require 'elasticsearch/model'
 
-class Site < ActiveRecord::Base
+class FullTextSearch < ActiveRecord::Base
 
   include Elasticsearch::Model
 
@@ -9,7 +9,7 @@ class Site < ActiveRecord::Base
   cluster_type = Rails.application.config.cluster_type
   client = Elasticsearch::Client.new url: cluster_url, log: false
 
-  Site.__elasticsearch__.client = client
+  FullTextSearch.__elasticsearch__.client = client
   index_name cluster_index
   document_type cluster_type
 
