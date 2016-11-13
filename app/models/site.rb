@@ -1,3 +1,4 @@
+require 'elasticsearch/model'
 
 class Site < ActiveRecord::Base
 
